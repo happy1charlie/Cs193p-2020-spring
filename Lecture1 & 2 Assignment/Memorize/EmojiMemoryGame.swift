@@ -9,10 +9,12 @@ import Foundation
 
 class EmojiMemoryGame {
     private var model: MemoryGame<String> = EmojiMemoryGame.createMemoryGame()
+    
+    static let random = Int.random(in: 2...5)
         
     static func createMemoryGame() -> MemoryGame<String> {
         let emojis = ["😊","😁","🤪","🥳","😎","😕","🥺","🤣"]
-        return MemoryGame<String>(numberOfPairsOfCards: 3, cardContentFactory: {(pairIndex: Int) -> String in return emojis[pairIndex]})
+        return MemoryGame<String>(numberOfPairsOfCards: self.random, cardContentFactory: {(pairIndex: Int) -> String in return emojis[pairIndex]})
     }
     
     // accsess to model
