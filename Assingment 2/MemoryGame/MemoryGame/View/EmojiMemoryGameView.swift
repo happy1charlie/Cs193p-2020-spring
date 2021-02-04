@@ -29,6 +29,7 @@ struct EmojiMemoryGameView: View {
                 CardView(card: card, color: color).onTapGesture {
                     gamePortal.choose(card: card)
                 }.padding()
+                 .foregroundColor(color)
             }
             
             Button(action: {
@@ -44,31 +45,27 @@ struct EmojiMemoryGameView: View {
 
 struct CardView: View {
     var card: MemoryGame<String>.Card
-    
     var color: Color
     
     var body: some View {
         GeometryReader { geometry in
-            ZStack{
-                if card.isFaceUp {
-                    RoundedRectangle(cornerRadius: cornerRaidus).stroke(color, lineWidth: lineWidth)
-                    RoundedRectangle(cornerRadius: cornerRaidus).fill(Color.white)
-                    Text(card.content)
-                } else {
-                    if !card.isMatched {
-                        RoundedRectangle(cornerRadius: cornerRaidus)
-                            .fill(LinearGradient(gradient: Gradient(colors: [color, Color.white]), startPoint: .topLeading, endPoint: .bottomTrailing))
-                    }
-                }
+            body(for: geometry.size)
+        }
+    }
+    
+    @ViewBuilder func body (for size: CGSize) -> some View {
+        if card.isFaceUp || !card.isMatched {
+            ZStack {
+                Pie(startedAngle: Angle.degrees(-90), endedAngle: Angle.degrees(30), clockwise: true).padding(5).opacity(0.7)
+                Text(card.content)
             }
-            .font(Font.system(size: fontSize(for: geometry.size)))
-            //let _ = print("width:\(geometry.size.width), height\(geometry.size.height)")
+            .font(Font.system(size: fontSize(for: size)))
+            .modifier(Cardify(isFaceUp: card.isFaceUp, color: color))
+//            .Cardify(isFaceUp: card.isFaceUp, color: color)
         }
     }
     
     // MARK: control panel
-    let cornerRaidus: CGFloat = 10.0
-    let lineWidth: CGFloat = 5
     
     func fontSize (for size:CGSize) -> (CGFloat) {
         min(size.width, size.height) * 0.75
