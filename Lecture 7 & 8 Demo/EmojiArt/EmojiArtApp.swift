@@ -11,7 +11,12 @@ import SwiftUI
 struct EmojiArtApp: App {
     var body: some Scene {
         WindowGroup {
-            EmojiArtDocumentVIew(document: EmojiArtDocument())
+            EmojiArtDocumentView(document: EmojiArtDocument())
         }
     }
 }
+
+/*
+ I am unhappy one Charlie
+ I like food and 
+ */

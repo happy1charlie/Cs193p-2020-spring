@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CBA181DB25CF8054009959F9 /* OptinalImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA181DA25CF8054009959F9 /* OptinalImage.swift */; };
+		CBA181E025CF8581009959F9 /* AnimatableSystemFontModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA181DF25CF8581009959F9 /* AnimatableSystemFontModifier.swift */; };
 		CBD9BF9825CA87F400139C7B /* EmojiArtApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD9BF9725CA87F400139C7B /* EmojiArtApp.swift */; };
 		CBD9BF9A25CA87F400139C7B /* EmojiArtDocumentVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD9BF9925CA87F400139C7B /* EmojiArtDocumentVIew.swift */; };
 		CBD9BF9C25CA87F500139C7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBD9BF9B25CA87F500139C7B /* Assets.xcassets */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CBA181DA25CF8054009959F9 /* OptinalImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptinalImage.swift; sourceTree = "<group>"; };
+		CBA181DF25CF8581009959F9 /* AnimatableSystemFontModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatableSystemFontModifier.swift; sourceTree = "<group>"; };
 		CBD9BF9425CA87F400139C7B /* EmojiArt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmojiArt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBD9BF9725CA87F400139C7B /* EmojiArtApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiArtApp.swift; sourceTree = "<group>"; };
 		CBD9BF9925CA87F400139C7B /* EmojiArtDocumentVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiArtDocumentVIew.swift; sourceTree = "<group>"; };
@@ -101,11 +105,13 @@
 		CBD9BF9625CA87F400139C7B /* EmojiArt */ = {
 			isa = PBXGroup;
 			children = (
-				CBD9BF9725CA87F400139C7B /* EmojiArtApp.swift */,
-				CBD9BF9925CA87F400139C7B /* EmojiArtDocumentVIew.swift */,
 				CBD9BFCD25CA9E7B00139C7B /* EmojiArt.swift */,
 				CBD9BFC525CA886B00139C7B /* EmojiArtDocument.swift */,
+				CBD9BF9925CA87F400139C7B /* EmojiArtDocumentVIew.swift */,
+				CBA181DA25CF8054009959F9 /* OptinalImage.swift */,
+				CBA181DF25CF8581009959F9 /* AnimatableSystemFontModifier.swift */,
 				CBD9BFD225CAA72F00139C7B /* EmojiArtExtensions.swift */,
+				CBD9BF9725CA87F400139C7B /* EmojiArtApp.swift */,
 				CBD9BF9B25CA87F500139C7B /* Assets.xcassets */,
 				CBD9BFA025CA87F500139C7B /* Info.plist */,
 				CBD9BF9D25CA87F500139C7B /* Preview Content */,
@@ -268,9 +274,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBA181E025CF8581009959F9 /* AnimatableSystemFontModifier.swift in Sources */,
 				CBD9BFCE25CA9E7B00139C7B /* EmojiArt.swift in Sources */,
 				CBD9BFD325CAA72F00139C7B /* EmojiArtExtensions.swift in Sources */,
 				CBD9BF9A25CA87F400139C7B /* EmojiArtDocumentVIew.swift in Sources */,
+				CBA181DB25CF8054009959F9 /* OptinalImage.swift in Sources */,
 				CBD9BFC625CA886B00139C7B /* EmojiArtDocument.swift in Sources */,
 				CBD9BF9825CA87F400139C7B /* EmojiArtApp.swift in Sources */,
 			);
